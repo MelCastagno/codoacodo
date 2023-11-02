@@ -8,6 +8,9 @@
     --sucolor: #e63946;
     --js-color: #fca311;
     --r-color: #2a9d8f;
+    --descuento-1border: #1d3557;
+    --descuento-2border: #2a9d8f;
+    --descuento-3border: #e9c46a;
 
     --img: url(./ba1.jpg); 
 }
@@ -19,6 +22,8 @@
     font-family: Arial, Helvetica, sans-serif;
 
 }
+
+
 
 #mainNavbar {
     background-color: var(--bgcolor);
@@ -77,12 +82,13 @@
             padding: 15px 15px;
         
         }
-        & .btn {
-            background-color: var(--bgbtn);
-            border: none;
-            
-         
-        }
+       
+    }
+    
+    #btn-comprar {
+        background-color: var(--bgbtn);
+        border: none;
+
     }
 
 
@@ -109,7 +115,58 @@
     }
 }
 
-
+.content-cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding:  0 5em;
+    & div[class^='card'] {
+        width: 250px;
+        border: 1px solid #e5e5e5;
+        padding: 0.5em;
+        margin: 1em;
+  
+        & h3 {
+            margin-bottom: .5em;
+        }
+        & img {
+            width: 100%;
+        }
+        & a[class^='js']{
+            border-radius: 5px;
+            padding: 2px;
+            background-color: var(--js-color);
+            color: black;
+            font-weight: bold;
+            font-size: x-small;
+        }
+        & a[class^='react']{
+            border-radius: 5px;
+            padding: 2px;
+            background-color: var(--r-color);
+            color: var(--textcolor);
+            font-weight: bold;
+            font-size: x-small;                      
+        }
+        & a[class^='negocios']{
+            border-radius: 5px;
+            padding: 2px;
+            background-color: var(--negocioscolor);
+            color: var(--textcolor);
+            font-weight: bold;
+            font-size: x-small;        
+        }
+        & a[class^='su']{
+            border-radius: 5px;
+            padding: 2px;
+            background-color: var(--sucolor);
+            color: var(--textcolor);
+            font-weight: bold;
+            font-size: x-small;        
+        }
+        
+    }
+}
 
 
 .grid-content {
@@ -126,58 +183,7 @@
             padding: 2em;
             text-align: center;
         }
-        .content-cards {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-evenly;
-            padding:  0 5em;
-            & div[class^='card'] {
-                width: 250px;
-                border: 1px solid #e5e5e5;
-                padding: 0.5em;
-                margin: 1em;
-          
-                & h3 {
-                    margin-bottom: .5em;
-                }
-                & img {
-                    width: 100%;
-                }
-                & a[class^='js']{
-                    border-radius: 5px;
-                    padding: 2px;
-                    background-color: var(--js-color);
-                    color: black;
-                    font-weight: bold;
-                    font-size: x-small;
-                }
-                & a[class^='react']{
-                    border-radius: 5px;
-                    padding: 2px;
-                    background-color: var(--r-color);
-                    color: var(--textcolor);
-                    font-weight: bold;
-                    font-size: x-small;                      
-                }
-                & a[class^='negocios']{
-                    border-radius: 5px;
-                    padding: 2px;
-                    background-color: var(--negocioscolor);
-                    color: var(--textcolor);
-                    font-weight: bold;
-                    font-size: x-small;        
-                }
-                & a[class^='su']{
-                    border-radius: 5px;
-                    padding: 2px;
-                    background-color: var(--sucolor);
-                    color: var(--textcolor);
-                    font-weight: bold;
-                    font-size: x-small;        
-                }
-                
-            }
-        }
+       
     }
         .item-2 {
             padding: 0 0 0 2em;
@@ -248,19 +254,18 @@
                     font-size: smaller;
                     margin: 1em;
                 }
-                .btn {
-                    margin-bottom: 1em;
-                    background-color: var(--bgbtn);
-                    width: 50%;
-                    border: none;
-                    color: var(--textcolor);
-                    border-radius: 5px;
-                    height: 3em;
-                }
-
-
             }
         }
+    }
+
+    .btn {
+        margin-bottom: 1em;
+        background-color: var(--bgbtn);
+        width: 50%;
+        border: none;
+        color: var(--textcolor);
+        border-radius: 5px;
+        height: 3em;
     }
 
 
@@ -283,6 +288,33 @@ a:hover {
     text-shadow: 1px 1px 3px black;
     text-decoration: none;
     color: var(--textcolor);
+}
+
+div[class^='descuento'] {
+    width: 250px;
+    padding: 0.5em;
+    margin: 1em;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.descuento-1 {
+    border: 1.5px solid var(--descuento-1border);
+}
+
+.descuento-2 {
+    border: 1.5px solid var(--descuento-2border);
+}
+
+.descuento-3 {
+    border: 1.5px solid var(--descuento-3border);
+}
+
+
+#descuentos {
+    margin: 5em;
+    padding: 1em;
+
 }
 
  
